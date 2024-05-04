@@ -1,57 +1,63 @@
-local webh = peejay
-local peejay = "https://discord.com/api/webhooks/1236376447011127388/tHfF6pHumalf1DrrXg3OU1nsZ4roEwHjAfetBnk6D5xiccfKCGIpjV6tfHV6QcGE5NN1"
 
-pcall(function()
-   local data = {
+    if game.PlaceId == 9503261072 then
+        
 
-  ['embeds'] = {
-    {
-       ['title'] = '```Webhook```',
-       ['description'] = '**TDX STATS**',
-       ['fields'] = {
-          {name = 'User', value = game:GetService("Players").LocalPlayer.Name},
-          {name = "Ping", value = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()},
-          {name = 'Level', value = game:GetService("Players").LocalPlayer.leaderstats.Level.Value},
-          {name = 'Wins', value = game:GetService("Players").LocalPlayer.leaderstats.Wins.Value},
-          {name = 'Gold', value = game:GetService("Players").LocalPlayer.PlayerGui.GUI.NewGoldDisplay.GoldText.Text},
 
+    local webh = "https://discord.com/api/webhooks/1236376447011127388/tHfF6pHumalf1DrrXg3OU1nsZ4roEwHjAfetBnk6D5xiccfKCGIpjV6tfHV6QcGE5NN1"
+
+
+    pcall(function()
+    local data = {
+
+    ['embeds'] = {
+        {
+        ['title'] = '```Webhook```',
+        ['description'] = '**TDX STATS**',
+        ['fields'] = {
+            {name = 'User', value = game:GetService("Players").LocalPlayer.Name},
+            {name = "Ping", value = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()},
+            {name = 'Level', value = game:GetService("Players").LocalPlayer.leaderstats.Level.Value},
+            {name = 'Wins', value = game:GetService("Players").LocalPlayer.leaderstats.Wins.Value},
+            {name = 'Gold', value = game:GetService("Players").LocalPlayer.PlayerGui.GUI.NewGoldDisplay.GoldText.Text},
+
+            }
         }
     }
-  }
-}
+    }
 
-   if syn then
-       local response = request(
-           {
-               Url = webh,
-               Method = 'POST',
-               Headers = {
-                   ['Content-Type'] = 'application/json'
-               },
-               Body = game:GetService('HttpService'):JSONEncode(data)
-           }
-       );
-   elseif request then
-       local response = request(
-           {
-               Url = webh,
-               Method = 'POST',
-               Headers = {
-                   ['Content-Type'] = 'application/json'
-               },
-               Body = game:GetService('HttpService'):JSONEncode(data)
-           }
-       );
-   elseif http_request then
-       local response = http_request(
-           {
-               Url = webh,
-               Method = 'POST',
-               Headers = {
-                   ['Content-Type'] = 'application/json'
-               },
-               Body = game:GetService('HttpService'):JSONEncode(data)
-           }
-       );
-   end
-end)
+    if syn then
+        local response = request(
+            {
+                Url = webh,
+                Method = 'POST',
+                Headers = {
+                    ['Content-Type'] = 'application/json'
+                },
+                Body = game:GetService('HttpService'):JSONEncode(data)
+            }
+        );
+    elseif request then
+        local response = request(
+            {
+                Url = webh,
+                Method = 'POST',
+                Headers = {
+                    ['Content-Type'] = 'application/json'
+                },
+                Body = game:GetService('HttpService'):JSONEncode(data)
+            }
+        );
+    elseif http_request then
+        local response = http_request(
+            {
+                Url = webh,
+                Method = 'POST',
+                Headers = {
+                    ['Content-Type'] = 'application/json'
+                },
+                Body = game:GetService('HttpService'):JSONEncode(data)
+            }
+        );
+    end
+    end)
+    end

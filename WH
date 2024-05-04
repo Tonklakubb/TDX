@@ -1,3 +1,6 @@
+local webh = peejay
+local peejay = "https://discord.com/api/webhooks/1236376447011127388/tHfF6pHumalf1DrrXg3OU1nsZ4roEwHjAfetBnk6D5xiccfKCGIpjV6tfHV6QcGE5NN1"
+
 pcall(function()
    local data = {
 

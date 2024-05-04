@@ -1,0 +1,54 @@
+pcall(function()
+   local data = {
+
+  ['embeds'] = {
+    {
+       ['title'] = '```Webhook```',
+       ['description'] = '**TDX STATS**',
+       ['fields'] = {
+          {name = 'User', value = game:GetService("Players").LocalPlayer.Name},
+          {name = "Ping", value = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()},
+          {name = 'Level', value = game:GetService("Players").LocalPlayer.leaderstats.Level.Value},
+          {name = 'Wins', value = game:GetService("Players").LocalPlayer.leaderstats.Wins.Value},
+          {name = 'Gold', value = game:GetService("Players").LocalPlayer.PlayerGui.GUI.NewGoldDisplay.GoldText.Text},
+
+        }
+    }
+  }
+}
+
+   if syn then
+       local response = request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   elseif request then
+       local response = request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   elseif http_request then
+       local response = http_request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   end
+end)

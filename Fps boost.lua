@@ -1,5 +1,9 @@
+while wait() do
+ for i,v in pairs(game.workspace.Enemies:GetChildren()) do 
+v:Destroy()
+end
+end
 
-game:GetService("Workspace").Camera:Destroy()
 game:GetService("RunService"):Set3dRenderingEnabled(false)
 
 local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.

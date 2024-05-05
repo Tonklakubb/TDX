@@ -35,7 +35,6 @@ local decalsyeeted = true -- Leaving this on makes games look shitty but the fps
                 e.Enabled = false
             end
         end
-a
 while wait() do
  for i,v in pairs(game.workspace.Enemies:GetChildren()) do 
 v:Destroy()

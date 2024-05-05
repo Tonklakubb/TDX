@@ -4,7 +4,7 @@ v:Destroy()
 end
 end
 
-game:GetService("RunService"):Set3dRenderingEnabled(false)
+
 
 local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
         local g = game

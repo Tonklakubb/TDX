@@ -43,3 +43,4 @@ local decalsyeeted = true -- Leaving this on makes games look shitty but the fps
                 e.Enabled = false
             end
         end
+end
